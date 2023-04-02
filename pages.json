@@ -1,0 +1,264 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus":{
+				"titleNView":false	
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/user/login",
+            "style" :                                                                                    
+            {
+                "app-plus":{
+					"titleNView":{
+						"titleText":"Login",
+						"titleColor":"#F0AD4E"
+						
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/mine",
+           "style" :
+           {
+               "app-plus":{
+           		"titleNView":{
+           			"titleText":"Mine",
+           			"titleColor":"#F0AD4E"
+           			
+           		}
+           	}
+           }
+            
+        }
+        ,{
+            "path" : "pages/index/main",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Home",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/reg",
+            "style" :                                                                                    
+            {
+                "app-plus":{
+					"titleNView":{
+						"titleText":"Sign up",
+						"titleColor":"#F0AD4E"
+						
+					}
+				}
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/jiezhongzhe/yuYue",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Vaccination",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/jiezhongzhe/yuYueList",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Vaccination history",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/jiezhongzhe/jieZhong",
+           "style" :
+           {
+               "app-plus":{
+           		"titleNView":{
+           			"titleText":"Vaccination",
+           			"titleColor":"#F0AD4E"
+           			
+           		}
+           	}
+           }
+            
+        }
+		,{
+		    "path" : "pages/jiezhongzhe/jieZhongList",
+		   "style" :
+		   {
+		       "app-plus":{
+		   		"titleNView":{
+		   			"titleText":"Vaccination history",
+		   			"titleColor":"#F0AD4E"
+		   			
+		   		}
+		   	}
+		   }
+		    
+		}
+        
+        ,{
+            "path" : "pages/worker/qianDao",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Check in",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/worker/qianDaoList",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Check in history",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/worker/yuJian",
+           "style" :
+           {
+               "app-plus":{
+           		"titleNView":{
+           			"titleText":"预检",
+           			"titleColor":"#F0AD4E"
+           			
+           		}
+           	}
+           }
+            
+        }
+        ,{
+            "path" : "pages/worker/yuJianList",
+           "style" :
+           {
+               "app-plus":{
+           		"titleNView":{
+           			"titleText":"Pre inspection history",
+           			"titleColor":"#F0AD4E"
+           			
+           		}
+           	}
+           }
+        }
+        
+        ,{
+            "path" : "pages/worker/jieZhong",
+           "style" :
+           {
+               "app-plus":{
+           		"titleNView":{
+           			"titleText":"Vaccination",
+           			"titleColor":"#F0AD4E"
+           			
+           		}
+           	}
+           }
+            
+        }
+        ,{
+            "path" : "pages/worker/jieZhongList",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Vaccination history",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/worker/liiuGuan",
+            "style" :
+            {
+                "app-plus":{
+            		"titleNView":{
+            			"titleText":"Observation",
+            			"titleColor":"#F0AD4E"
+            			
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/worker/liuGuanList",
+           "style" :
+           {
+               "app-plus":{
+           		"titleNView":{
+           			"titleText":"Observation history",
+           			"titleColor":"#F0AD4E"
+           			
+           		}
+           	}
+           }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+			"list":[
+				{
+					"pagePath":"pages/index/main",
+					"text":"Home",
+					"iconPath":"static/all.png",
+					"selectedIconPath":"static/all-fill.png"
+				},
+				{
+					"pagePath":"pages/user/mine",
+					"text":"Mine",
+					"iconPath":"static/bussiness-man.png",
+					"selectedIconPath":"static/certified-supplier.png"
+				}
+			]
+		
+	}
+}
