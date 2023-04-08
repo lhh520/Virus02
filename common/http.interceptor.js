@@ -1,5 +1,6 @@
 const config = {
-	baseUrl: 'http://192.168.1.102:8888', // 请求的本域名
+	//baseUrl: 'http://192.168.1.102:8888', // 请求的本域名
+	baseUrl: 'http://101.42.252.33:8888', 
 	method: 'POST',
 	// 设置为json，返回后会对数据进行一次JSON.parse()
 	dataType: 'json',
