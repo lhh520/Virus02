@@ -2,36 +2,36 @@
 	<view class="page">
 		<u-form label-width="200rpx" :model="form" ref="uForm" class="reg">
 			
-			<u-form-item label="用户名" prop="username">
+			<u-form-item label="username" prop="username">
 				<u-input v-model="form.username" />
 			</u-form-item>
 			
-			<u-form-item label="密码" prop="password">
+			<u-form-item label="username" prop="password">
 				<u-input type="password" v-model="form.password" />
 			</u-form-item>
 			
-			<u-form-item label="重复密码" prop="password2">
+			<u-form-item label="password2" prop="password2">
 				<u-input type="password" v-model="form.password2" />
 			</u-form-item>
 			
-			<u-form-item label="姓名" prop="realName">
+			<u-form-item label="realName" prop="realName">
 				<u-input v-model="form.realName" />
 			</u-form-item>
 			
-			<u-form-item label="身份证" prop="card">
+			<u-form-item label="card" prop="card">
 				<u-input v-model="form.card" />
 			</u-form-item>
 			
-			<u-form-item label="联系方式" prop="phone">
+			<u-form-item label="phone" prop="phone">
 				<u-input v-model="form.phone" />
 			</u-form-item>
 			
-			<u-form-item label="所属地" prop="areaName">
+			<u-form-item label="areaName" prop="areaName">
 				<u-input v-model="form.areaName" type="select" @click="isShow=true" />
 				<u-picker v-model="isShow" mode="region" @confirm="setArea"></u-picker>
 			</u-form-item>
 			
-			<u-form-item label="详细地址" prop="address">
+			<u-form-item label="address" prop="address">
 				<u-input v-model="form.address" />
 			</u-form-item>
 			
@@ -68,19 +68,19 @@
 					username:[
 						{
 						required: true, 
-						message: '请输入用户名', 
+						message: 'enter user name', 
 						// 可以单个或者同时写两个触发验证方式 
 						trigger: ['change','blur'],
 						
 						},
 						{
 							min: 3,
-							message:'用户名至少需要3个字符',
+							message:'At least 3 characters',
 							trigger: ['change','blur'],
 						},
 						{
 							max: 18,
-							message:'用户名最多18个字符',
+							message:'Up to 18 characters',
 							trigger: ['change','blur'],
 						}
 					],
@@ -88,7 +88,7 @@
 						{
 							min:6,
 							max:20,
-							message:'密码必须是6-20位',
+							message:' between 6 and 20 digits',
 							trigger:'blur'
 						}
 					],
@@ -96,7 +96,7 @@
 						{
 							min:6,
 							max:20,
-							message:'密码必须是6-20位',
+							message:'between 6 and 20 digits',
 							trigger:'blur'
 						},
 						{
@@ -105,7 +105,7 @@
 								// this.$u.test.mobile()就是返回true或者false的
 								return this.form.password==this.form.password2;
 							},
-							message: '两次密码不同',
+							message: 'Two different passwords',
 							// 触发器可以同时用blur和change
 							trigger: 'blur',
 						}
@@ -113,19 +113,19 @@
 					realName:[
 						{
 						required: true, 
-						message: '请输入姓名', 
+						message: 'Please enter your name', 
 						// 可以单个或者同时写两个触发验证方式 
 						trigger: ['change','blur'],
 						
 						},
 						{
 							min: 2,
-							message:'姓名至少需要2个字符',
+							message:'At least 2 characters long',
 							trigger: ['change','blur'],
 						},
 						{
 							max: 10,
-							message:'姓名最多10个字符',
+							message:'At least 10 characters long',
 							trigger: ['change','blur'],
 						}
 					],
@@ -133,21 +133,21 @@
 						
 						{
 							pattern:/^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/,
-						message:'身份证格式有误',
+						message:'Incorrect format of ID card',
 						trigger: ['change','blur'],
 						}
 					],
 					phone:[
 						{
 							pattern: /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/,
-							message:'手机号格式有误',
+							message:'Incorrect phone number format',
 							trigger: ['change','blur'],
 						}
 					],
 					address:[
 						{
 							required: true,
-							message: '请输入地址', 
+							message: 'Please enter the address', 
 							// 可以单个或者同时写两个触发验证方式 
 							trigger: ['change','blur'],
 						}
@@ -167,8 +167,8 @@
 									this.$u.post("/user/register",this.form).then((res)=>{
 										if(res.success){
 											uni.showModal({
-											    title: '注册成功',
-											    content: '您已经注册成功！点击确定将跳转到登录界面',
+											    title: 'login was successful',
+											    content: 'You have successfully registered! Click OK to jump to the login interface',
 												showCancel:false,
 											    success: function (res) {
 											        if (res.confirm) {

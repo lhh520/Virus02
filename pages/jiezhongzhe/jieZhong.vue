@@ -31,7 +31,7 @@
 						for(let i=0;i<res.data.length;i++){
 							
 							if(res.data[i].status==0){
-								this.qrCodePath = this.$u.http.config.baseUrl + res.data[i].qrCodePath;
+								this.qrCodePath =  res.data[i].qrCodePath;
 								console.log(this.qrCodePath);
 							break;
 							}
