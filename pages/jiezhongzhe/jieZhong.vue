@@ -2,10 +2,10 @@
 	<view class="page">
 		<view v-if="qrCodePath">
 			<u-image width="650rpx" height="650rpx" :src="qrCodePath"></u-image>
-			<view>将此二维码展示给疫苗接种点工作人员</view>
+			<view>display</view>
 		</view>
 		<view v-else>
-			<u-empty text="暂无预约" mode="search"></u-empty>
+			<u-empty text="Nothing" mode="search"></u-empty>
 
 		</view>
 		

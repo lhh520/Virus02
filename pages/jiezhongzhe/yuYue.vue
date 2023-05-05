@@ -33,10 +33,12 @@
 			}
 		},
 		onLoad() {
+			uni.setLocale('en');
 			this.init();
 		},
 		methods: {
 			init(){
+				uni.setLocale('en');
 				this.$u.get('/jiezhongdian/findAll').then(res=>{
 					console.log(res)
 					if(res.success){
@@ -51,7 +53,7 @@
 				})
 			},
 			setJieZhongDian(res){
-				
+				uni.setLocale('en');
 				this.form.jiezhongdianId =res[0].value;
 				this.form.jiezhongdianName =res[0].label;
 			},

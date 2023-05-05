@@ -26,22 +26,22 @@
 				<u-input v-model="form.phone" />
 			</u-form-item>
 			
-			<u-form-item label="areaName" prop="areaName">
+			<!-- <u-form-item label="areaName" prop="areaName">
 				<u-input v-model="form.areaName" type="select" @click="isShow=true" />
 				<u-picker v-model="isShow" mode="region" @confirm="setArea"></u-picker>
-			</u-form-item>
+			</u-form-item> -->
 			
 			<u-form-item label="address" prop="address">
 				<u-input v-model="form.address" />
 			</u-form-item>
 			
 			
-			<u-button :loading="isLoading" @click="reg" type="success">注册</u-button>
+			<u-button :loading="isLoading" @click="reg" type="success">Sign up</u-button>
 		<!-- <view class="tips">
 			<text @click="toLogin">返回</text>
 		</view> -->
 		</u-form>
-		<u-button  @click="toLogin"  class="back">返回</u-button>
+		<u-button  @click="toLogin"  class="back">back</u-button>
 	</view>
 </template>
 
@@ -157,7 +157,7 @@
 			}
 		},
 			onReady() {
-				this.$refs.uForm.setRules(this.rules);
+				//this.$refs.uForm.setRules(this.rules);
 			},
 		methods: {
 			reg(){
