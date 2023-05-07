@@ -1,35 +1,35 @@
 <template>
 	<view class="page">
-		<u-button type="primary" @click="scanCode">扫码</u-button>
+		<u-button type="primary" @click="scanCode">Scan Code</u-button>
 		<view v-show="isShow"  class="aaa">
 			<view v-if="result.success">
-				预检成功
+				Success
 			</view>
 			<view v-else>
 				{{result.message}}
 			</view>
 		</view>
 			<u-form v-show="form.yuyueId" label-width='150' :model="form" ref="uForm">
-				<u-form-item label="低压" prop="diya">
+				<u-form-item label="low pressure" prop="diya">
 					<u-input v-model="form.diya"></u-input>
 				</u-form-item>
-				<u-form-item label="高压" prop="gaoya">
+				<u-form-item label="high pressure" prop="gaoya">
 					<u-input v-model="form.gaoya"></u-input>
 				</u-form-item>
-				<u-form-item label="体温" prop="tiwen">
+				<u-form-item label="temperature" prop="tiwen">
 					<u-input v-model="form.tiwen"></u-input>
 				</u-form-item>
-				<u-form-item label="是否服药">
+				<u-form-item label="Medication or not">
 					<u-radio-group v-model="form.isFuyao">
-						<u-radio :name='0'>未服药</u-radio>
-						<u-radio :name='1'>已服药</u-radio>
+						<u-radio :name='0'>No</u-radio>
+						<u-radio :name='1'>Yes</u-radio>
 					</u-radio-group>
 					<u-input v-model="form.isFuyao"></u-input>
 				</u-form-item>
-				<u-form-item label="药物名称" v-show="form.isFuyao==1">
+				<u-form-item label="Drug name" v-show="form.isFuyao==1">
 					<u-input v-model="form.yaowumingcheng"></u-input>
 				</u-form-item>
-				<u-button type="success" @click="yujian">预检</u-button>
+				<u-button type="success" @click="yujian">Pre inspection</u-button>
 			</u-form>
 	</view>
 </template>

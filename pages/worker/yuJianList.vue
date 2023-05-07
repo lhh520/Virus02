@@ -6,9 +6,9 @@
 			<u-cell-item 
 			 v-for="item of list"
 			:key="item.yuyueId"  
-			:title="'预约ID:'+item.yuyueId+' - 接种人:'+item.jiezhongren"  
+			:title="'AppointmentID:'+item.yuyueId+' - Vaccinator:'+item.jiezhongren"  
 			:label="item.createTime" 
-			:value="'高压:'+item.gaoya+' 低压:'+item.diya+' 体温:'+item.tiwen" 
+			:value="'high pressure:'+item.gaoya+' low pressure:'+item.diya+' temperature:'+item.tiwen" 
 			icon="order" 
 			hover-class="none" 
 			:arrow="false" 

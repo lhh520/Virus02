@@ -1,23 +1,23 @@
 <template>
 	<view class="page">
-		<u-button type="primary" @click="scanCode">扫码</u-button>
+		<u-button type="primary" @click="scanCode">Scan Code</u-button>
 		<view v-show="isShow"  class="aaa">
 			<view v-if="result.success">
-				留观完成
+				Observation completion
 			</view>
 			<view v-else>
 				{{result.message}}
 			</view>
 		</view>
 			<u-form v-show="form.yuyueId" label-width='150' ref="uForm" :model="form">
-				<u-form-item label="时长(分钟)" prop="liiuguanShichang">
+				<u-form-item label="Duration (minutes)" prop="liiuguanShichang">
 					<u-input v-model="form.liiuguanShichang"></u-input>
 				</u-form-item>
-				<u-form-item label="备注(选填)" prop="liuguanShuoming">
+				<u-form-item label="Remarks (optional)" prop="liuguanShuoming">
 					<u-input type='textarea' v-model="form.liuguanShuoming"></u-input>
 				</u-form-item>
 		
-				<u-button type="success" @click="liuGuan">结束留观</u-button>
+				<u-button type="success" @click="liuGuan">End observation</u-button>
 			</u-form>
 	</view>
 </template>
@@ -40,7 +40,7 @@
 										{ 
 											required: true, 
 											
-											message: '请输入留观时间', 
+											message: 'Please enter the observation time', 
 											
 											// 可以单个或者同时写两个触发验证方式 
 											trigger: ['blur'],
@@ -48,7 +48,7 @@
 									
 										{
 											pattern:/^[2-4]?[0-9]$/,
-											message:'时长应在20-50分钟之间',
+											message:'The duration should be between 20-50 minutes',
 											trigger: 'blur',
 										}
 					]

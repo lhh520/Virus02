@@ -6,9 +6,9 @@
 			<u-cell-item 
 			 v-for="item of list"
 			:key="item.yuyueId"  
-			:title="'预约ID:'+item.yuyueId+' - 接种人:'+item.jiezhongren"  
+			:title="'AppointmentID:'+item.yuyueId+' - Vaccinator:'+item.jiezhongren"  
 			:label="item.createTime" 
-			:value="'时长:'+item.liiuguanShichang+'分钟-说明:'+item.liuguanShuoming" 
+			:value="'Duration:'+item.liiuguanShichang+'Minutes - Description:'+item.liuguanShuoming" 
 			icon="order" 
 			hover-class="none" 
 			:arrow="false" 

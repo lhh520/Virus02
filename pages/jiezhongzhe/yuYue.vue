@@ -65,8 +65,8 @@
 				this.$u.post("/user/yuyue",this.form).then(res=>{
 					if(res.success){
 						uni.showModal({
-						    title: '预约成功',
-						    content: '您已经预约成功！请您准时在预约的时间到达预约接种点完成预约',
+						    title: 'Appointment successful',
+						    content: 'You have successfully made an appointment! Please arrive at the scheduled vaccination site on time to complete the appointment',
 							showCancel:false,
 						    success(res) {
 								if (res.confirm) {
